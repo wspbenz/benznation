@@ -1,0 +1,396 @@
+/* CUSTOM HOSTED FONT */
+
+@font-face {
+  font-family: 'graffiti'; /* Give it a name */
+  src: url('graffiti.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    background: url(./bg.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    width: 100%;
+    height: 100vh;
+    color: white;
+    font-family: "Poppins", sans-serif;
+
+    scroll-snap-type: y mandatory; /* enables snapping */
+    overflow-y: scroll;
+
+    opacity: 0;
+    animation: bodyFadeIn 1s ease-in 0.1s forwards;
+}
+
+@keyframes bodyFadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+/* NAVBAR */
+
+nav{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    padding: 0 50px;
+    height: 100px;
+}
+nav a{
+    font-size: 20px;
+    margin: 0 10px;
+    border: 2px solid gray;
+    background: rgba(255, 255, 255, 0.151);
+    backdrop-filter: blur(20px);
+
+    padding: 12px 12px;
+    border-radius: 12px;
+    transition: 0.3s;
+
+    
+}
+nav a span{
+    margin-left: 10px;
+}
+nav a:hover{
+    background: white;
+    color: black;
+    padding: 15px 45px;
+}
+nav .homebtn{
+    position: fixed;   /* makes it stay on screen */
+    top: 0;
+    left: 0;
+
+    display: flex;     /* flexbox used for alignment */
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    padding: 15px;     /* spacing from edges */
+    z-index: 1000;  
+}
+
+/* SECTION 1: HOMEPAGE */
+.homepage{
+    scroll-snap-align: start;
+}
+.homepage .text{
+    text-align: center;
+    padding: 0 200px;
+    margin-top: 200px;
+    font-size: 20px;
+    margin-bottom: 500px;
+    font-size: 30px;
+}
+.homepage .text h1{
+    font-size: 100px;
+    font-family: "graffiti", sans-serif;
+    color: rgba(255, 255, 255, 0.548);
+}
+.homepage .text .buttons{
+    margin-top: 70px;
+    justify-content: center;
+    display: flex;
+}
+.homepage .text .buttons a{
+    border: 2px solid gray;
+    background: rgba(255, 255, 255, 0.151);
+    backdrop-filter: blur(20px);
+    padding: 8px 32px;
+    border-radius: 12px;
+    transition: 0.3s;
+}
+.homepage .text .buttons a span{
+    margin-right: 15px;
+}
+.homepage .text .buttons a:hover{
+    background: white;
+    color: black;
+    
+    padding: 12px 60px;
+}
+
+
+/* SECTION 2: GET STARTED */
+.getstarted{
+    scroll-snap-align: start;
+}
+.getstarted .text{
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 500px;
+    padding: 0 200px;
+    font-size: 35px;
+}
+.getstarted .text h1{
+    font-size: 100px;
+    color: rgba(255, 255, 255, 0.226);
+}
+.getstarted .text .buttons{
+    margin-top: 70px;
+}
+.getstarted .text .buttons a{
+    border: 2px solid gray;
+    padding: 10px 30px;
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.164);
+    backdrop-filter: blur(20px);
+    font-size: 30px;
+    transition: 0.3s;
+    margin-right: 20px;
+}
+.getstarted .text .buttons a span{
+    margin-left: 10px;
+}
+.getstarted .text .buttons a:hover{
+    background: white;
+    color: black;
+    padding: 15px 45px;
+}
+
+
+
+/* SECTION 3: CONTACT */
+.contact{
+    scroll-snap-align: start;
+}
+.contact .text{
+    text-align: center;
+    justify-content: center;
+    padding: 0 200px;
+    font-size: 30px;
+    margin-bottom: 500px;
+
+}
+.contact .text h1{
+    font-size: 100px;
+    color: rgba(255, 255, 255, 0.281);
+}
+.contact .buttons{
+    justify-content: center;
+    align-items: center;
+    margin-top: 70px;
+    
+}
+.contact .buttons a{
+    border: 2px solid gray;
+    padding: 10px 30px;
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.164);
+    backdrop-filter: blur(20px);
+    font-size: 30px;
+    transition: 0.3s;
+    margin-right: 20px;
+}
+.contact .text .buttons a span{
+    margin-left: 10px;
+}
+.contact .text .buttons a:hover{
+    background: white;
+    color: black;
+    padding: 15px 45px;
+}
+
+
+
+/* SECTION 4: SOCIAL-LINKS */
+
+.socials{
+    padding-bottom: 500px;
+}
+.socials .text{
+}
+.socials .text h1{
+    font-size: 100px;
+    color: rgba(255, 255, 255, 0.281);
+    text-align: center;
+}
+.socials .text .buttons{
+    display: flex;
+    justify-content: center;
+    font-size: 40px;
+    margin-top: 70px;
+}
+.socials .text .buttons a{
+    border: 2px solid gray;
+    background: rgba(255, 255, 255, 0.137);
+    border-radius: 20px;
+    backdrop-filter: blur(20px);
+
+    padding: 5px 20px;
+    transition: 0.3s;
+    margin-right: 30px;
+}
+.socials .text .buttons a:hover{
+    background: white;
+    color: black;
+    padding: 5px 40px;
+}
+
+
+
+/* RESPONSIVENESS */
+@media (max-width: 855px){
+    .getstarted .text .buttons{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .getstarted .text .buttons a{
+        margin-bottom: 20px;
+    }
+    .contact .text .buttons{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .contact .text .buttons a{
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 769px){
+    .homepage .text{
+        font-size: 20px;
+    }
+    .getstarted .text{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        min-height: 100vh;
+        font-size: 24px;
+    }
+    .contact .text{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        min-height: 100vh;
+        font-size: 20px
+    }
+}
+
+@media (max-width: 678px){
+    nav a span{
+        display: none;
+    }
+    .homepage .text{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        min-height: 100vh;
+        font-size: 20px;
+    }
+    .getstarted .text .buttons a{
+        font-size: 25px;
+    }
+}
+
+@media (max-width: 584px){
+    nav a{
+        font-size: 30px;
+    }
+    .homepage .text{
+        padding: 0 30px;
+    }
+    .getstarted .text{
+        padding: 0 30px;
+    }
+    .contact .text{
+        padding: 0 30px;
+    }
+    .socials .buttons {
+        display: flex;
+        flex-wrap: wrap;  
+        gap: 15px;
+        justify-content: center;
+    }
+    .socials .buttons a {
+        flex: 0 0 calc(33.333% - 15px);
+        text-align: center;
+    }
+}
+
+@media (max-width: 504px){
+    nav a{
+        font-size: 20px;
+    }
+    .contact .text{
+        font-size: 20px;
+        padding: 0 30px;
+    }
+    .contact .text h1{
+        font-size: 80px;
+    }
+}
+@media (max-width: 458px){
+    .socials .text h1{
+        font-size: 70px;
+    }
+    .socials .text .buttons a{
+        font-size: 40px;
+        margin: 0;
+        flex: 0 0 calc(20% - 15px);
+    }
+    .getstarted .text{
+        font-size: 20px;
+    }
+    .getstarted .text h1{
+        font-size: 80px;
+    }
+}
+
+@media (max-width: 405px){
+    .contact .text h1{
+        font-size: 60px;
+    }
+    .contact .text{
+        font-size: 18px;
+    }
+    .homepage .text{
+        font-size: 17px;
+    }
+    .homepage .text h1{
+        font-size: 80px;
+        margin-bottom: 100px;
+    }
+}
+
+@media (max-width: 360px){
+    nav{
+        padding: 0 10px;;
+    }
+    nav a{
+        font-size: 20px;
+    }
+    nav a:hover{
+        padding: 12px 12px;
+    }
+    .getstarted .text h1{
+        font-size: 70px;
+    }
+}
